@@ -10,3 +10,5 @@
 ```bash
 PG_PASS=YOUR_PASSWORD docker-compose -f postgres/docker-compose.yml up -d
 ```
+
+где **YOUR_PASSWORD** - ваш пароль для юзера postgres
