@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  postgres:
+    platform: linux/amd64
+    container_name: postgres
+    image: postgis/postgis:13-3.3
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ${PWD}/data/db:/var/lib/postgresql/data
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_PASSWORD: $PG_PASS
